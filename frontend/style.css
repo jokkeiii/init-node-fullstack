@@ -2,12 +2,24 @@
 
 body {
     font-family: "Raleway", sans-serif;
-}
-
-#cities {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 td {
     padding: 3px 9px;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cities,
+#city,
+#city-info {
+    font-size: 1.5rem;
+}
+
+#back {
+    padding-top: 40px;
 }
