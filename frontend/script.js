@@ -1,6 +1,44 @@
 "use strict";
 const apiUrl = "http://localhost:5000/api/cities";
 
+// search form
+const searchForm = document.getElementById("city-form");
+// event listener to search form
+searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    searchForm.reset();
+});
+
+const formThis = () => {
+    const city = {
+        city: form.elements["city"].value,
+        country: form.elements["country"].value,
+    };
+
+    addCity(city);
+
+    form.elements["city"].value = "";
+    form.elements["country"].value = "";
+};
+
+const addCity = async (city) => {
+    try {
+        const response = await fetch(
+            apiUrl +
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: JSON.stringify(city),
+                }
+        );
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 const populateTable = (data) => {
     const table = document.getElementById("cities");
 
