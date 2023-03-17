@@ -1,0 +1,15 @@
+GET http://localhost:5000/api/cities
+
+###
+GET http://localhost:5000/api/cities/2
+###
+POST http://localhost:5000/api/cities
+Content-Type: application/json
+
+{
+    "city": "London",
+    "country": "United Kingdom"
+}
+
+###
+DELETE http://localhost:5000/api/cities/2
